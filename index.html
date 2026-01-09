@@ -15,18 +15,27 @@
   <header class="hero">
     <div class="hero__content">
       <span class="pill">Nova cançó · Encara queda amor</span>
-      <h1>Carta al teu jo del futur</h1>
+      <h1>Escriu-li al teu jo del futur</h1>
       <p>
-        Escriu una carta íntima, escull el dia i deixa que el teu futur jo la rebi al seu correu.
-        Una experiència emotiva per celebrar el llançament de la meva nova cançó.
+        Una carta que viatja en el temps. Comparteix records, intencions i somnis en un espai
+        tranquil i bonic, mentre escoltes la nova cançó de fons.
       </p>
       <div class="hero__actions">
         <button class="btn btn--primary" type="button" id="musicToggle">Reproduir cançó</button>
         <a class="btn btn--ghost" href="#formulari">Començar la carta</a>
       </div>
+      <div class="hero__prompts">
+        <p>Idees per començar:</p>
+        <div class="prompt-grid">
+          <span>Quins són els teus somnis?</span>
+          <span>Què t'agradaria millorar?</span>
+          <span>On t'imagines vivint?</span>
+          <span>On vols treballar?</span>
+        </div>
+      </div>
     </div>
     <div class="hero__card">
-      <h2>Com funciona?</h2>
+      <h2>Com funciona</h2>
       <ol>
         <li>Escriu el teu missatge personal.</li>
         <li>Tria la data exacta d'enviament.</li>
@@ -38,7 +47,7 @@
 
   <main class="container" id="formulari">
     <div class="form-header">
-      <h2>Escriu la teva carta</h2>
+      <h2>La teva carta</h2>
       <p>Tot el que escriguis és privat i serà enviat només a tu.</p>
     </div>
 
@@ -59,8 +68,13 @@
       </div>
 
       <div class="field">
-        <label for="text">La teva carta</label>
-        <textarea id="text" rows="8" placeholder="Explica-li al teu futur jo com et sents avui, què vols recordar o què somies..." required></textarea>
+        <label for="text">Què li diries al teu futur jo?</label>
+        <textarea id="text" rows="8" placeholder="Com et sents avui? Quines petites victòries vols recordar?" required></textarea>
+        <div class="prompt-list">
+          <span>Quin record no vols perdre?</span>
+          <span>Què et dona pau quan ho rellegeixis?</span>
+          <span>Quina promesa et vols fer?</span>
+        </div>
       </div>
 
       <button class="btn btn--primary" type="submit">Preparar carta</button>
