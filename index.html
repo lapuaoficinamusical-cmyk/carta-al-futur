@@ -2,37 +2,76 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Carta al teu jo del futur</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <audio id="bgMusic" loop>
-    <source src="05 - Encara queda amor.wav" type="audio/mpeg">
+    <source src="05 - Encara queda amor.wav" type="audio/wav">
     El teu navegador no suporta àudio.
   </audio>
 
-  <div class="container">
-    <h1>Carta al teu jo del futur</h1>
-    <p>Escriu la teva carta, tria la data d'enviament i deixa que arribi al teu futur jo.</p>
+  <header class="hero">
+    <div class="hero__content">
+      <span class="pill">Nova cançó · Encara queda amor</span>
+      <h1>Carta al teu jo del futur</h1>
+      <p>
+        Escriu una carta íntima, escull el dia i deixa que el teu futur jo la rebi al seu correu.
+        Una experiència emotiva per celebrar el llançament de la meva nova cançó.
+      </p>
+      <div class="hero__actions">
+        <button class="btn btn--primary" type="button" id="musicToggle">Reproduir cançó</button>
+        <a class="btn btn--ghost" href="#formulari">Començar la carta</a>
+      </div>
+    </div>
+    <div class="hero__card">
+      <h2>Com funciona?</h2>
+      <ol>
+        <li>Escriu el teu missatge personal.</li>
+        <li>Tria la data exacta d'enviament.</li>
+        <li>Rep la carta al teu email el dia que escullis.</li>
+      </ol>
+      <p class="note">*L'enviament real s'integrarà amb el servei de correu.</p>
+    </div>
+  </header>
+
+  <main class="container" id="formulari">
+    <div class="form-header">
+      <h2>Escriu la teva carta</h2>
+      <p>Tot el que escriguis és privat i serà enviat només a tu.</p>
+    </div>
 
     <form id="cartaForm">
-      <label for="email">El teu email:</label>
-      <input type="email" id="email" required placeholder="exemple@correu.com">
+      <div class="field">
+        <label for="email">El teu email</label>
+        <input type="email" id="email" required placeholder="exemple@correu.com">
+      </div>
 
-      <label for="data">Data d'enviament:</label>
-      <input type="date" id="data" required>
+      <div class="field">
+        <label for="data">Data d'enviament</label>
+        <input type="date" id="data" required>
+      </div>
 
-      <label for="assumpte">Assumpte:</label>
-      <input type="text" id="assumpte" placeholder="Carta al meu jo del futur">
+      <div class="field">
+        <label for="assumpte">Assumpte</label>
+        <input type="text" id="assumpte" placeholder="Carta al meu jo del futur">
+      </div>
 
-      <label for="text">Escriu la teva carta:</label>
-      <textarea id="text" rows="8" placeholder="Escriu aquí el que vols recordar al teu futur jo..." required></textarea>
+      <div class="field">
+        <label for="text">La teva carta</label>
+        <textarea id="text" rows="8" placeholder="Explica-li al teu futur jo com et sents avui, què vols recordar o què somies..." required></textarea>
+      </div>
 
-      <button type="submit">Preparar carta</button>
+      <button class="btn btn--primary" type="submit">Preparar carta</button>
     </form>
 
-    <div id="missatge"></div>
-  </div>
+    <div id="missatge" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Gràcies per formar part d'aquest viatge. Comparteix la cançó amb qui estimes.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
