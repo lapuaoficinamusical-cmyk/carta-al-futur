@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta al teu jo del futur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" loop>
+    <source src="05 - Encara queda amor.wav" type="audio/mpeg">
+    El teu navegador no suporta àudio.
+  </audio>
+
+  <div class="container">
+    <h1>Carta al teu jo del futur</h1>
+    <p>Escriu la teva carta, tria la data d'enviament i deixa que arribi al teu futur jo.</p>
+
+    <form id="cartaForm">
+      <label for="email">El teu email:</label>
+      <input type="email" id="email" required placeholder="exemple@correu.com">
+
+      <label for="data">Data d'enviament:</label>
+      <input type="date" id="data" required>
+
+      <label for="assumpte">Assumpte:</label>
+      <input type="text" id="assumpte" placeholder="Carta al meu jo del futur">
+
+      <label for="text">Escriu la teva carta:</label>
+      <textarea id="text" rows="8" placeholder="Escriu aquí el que vols recordar al teu futur jo..." required></textarea>
+
+      <button type="submit">Preparar carta</button>
+    </form>
+
+    <div id="missatge"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
